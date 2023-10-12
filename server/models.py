@@ -57,6 +57,6 @@ class CakeBakeries(db.Model, SerializerMixin):
     #Add Validation
     @validates('price')
     def validate_price(self, key, price):
-        if not 1 <= price <= 1000:
+        if not 0 < price <= 1000:
             raise ValueError("Ptice must be between 1 and 1000.")
         return price
